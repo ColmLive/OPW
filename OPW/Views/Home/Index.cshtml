@@ -1,31 +1,74 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+	ViewBag.Title = "Home Page";
 }
 
+
+
+
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+	<h2><strong>The Department of Employment and Social Protection</strong></h2>
+	<div class="row">
+		<div class="w3-half w3-section" style="max-width:25em">
+			<img class="mySlides" src="~/Resources/AMD.jpg" alt="AMD Image" style="width:100%">
+			<img class="mySlides" src="~/Resources/Balbriggan.jpg" alt="Balbriggan" style="width:100%">
+			<img class="mySlides" src="~/Resources/Clondalkin.jpg" alt="Clondalkin" style="width:100%">
+			<img class="mySlides" src="~/Resources/Cork Abbeycourt.jpg" alt="Cork Abbeycourt" style="width:100%">
+			<img class="mySlides" src="~/Resources/Longford Intreo.jpg" alt="Longford" style="width:100%">
+			<img class="mySlides" src="~/Resources/Tallaght.jpg" alt="Tallaght" style="width:100%">
+			<img class="mySlides" src="~/Resources/AMD View.jpg" alt="AMD Image" style="width:100%">
+
+			<script>
+				var myIndex = 0;
+				carousel();
+
+				function carousel() {
+					var i;
+					var x = document.getElementsByClassName("mySlides");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					}
+					myIndex++;
+					if (myIndex > x.length) { myIndex = 1 }
+					x[myIndex - 1].style.display = "inLine";
+					setTimeout(carousel, 5000); // Change image every 5 seconds
+				}
+			</script>
+		</div>
+
+		<!--
+		<div class="w3-half-2 w3-section pull-right img-responsive" style="max-width:20em">
+			<article class="float_right">
+				<h3><strong>DEASP - OPWAPP</strong></h3>
+				<img src="~/Resources/Cartoon Builder.jpg" alt="Cartoon Builder">
+				<p>
+					This website is for the management of all DEASP and OPW work approval and funding requests
+				</p>
+			</article>
+		</div>
+
+			 -->
+
+	</div>
 </div>
 
+<!-- /Section: intro -->
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+	<div class="col-md-4">
+		<h2>OPW Help Desk</h2>
+		<p>
+			All DEASP building work requests should in the first instance be submitted to the OPW help desk.
+			Tel: (046) 942 6000 / 0761 10 6000 LoCall: 1890 213 414 Fax: (046) 948 1793 Email:
+		</p>
+		<p><a class="btn btn-default" href="https://info@opw.ie">OPW HelpDesk &raquo;</a></p>
+	</div>
+	<div class="col-md-4">
+		<h2>Contact the OPW</h2>
+		<p>The following is a link to the OPW contact list</p>
+		<p><a class="btn btn-default" href="https://www.opw.ie/en/media/opw-telephone-directory-29032018.pdf">OPW Contacts &raquo;</a></p>
+	</div>
+	<div class="col-md-4">
+		<h2>DEASP Facilities Management Contacts</h2>
+		<p>The Department of Employment and social Protections Facilites Management unit is split in four destinct operational sections. click below</p>
+		<p><a class="btn btn-default" href="http://www.welfare.ie/en/Pages/Management-Board.aspx">FMU Contacts &raquo;</a></p>
+	</div>
 </div>
